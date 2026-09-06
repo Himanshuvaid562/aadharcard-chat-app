@@ -1,0 +1,31 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: aadhar-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    container_name: aadhar-app
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/aadhaar-chat
+      - JWT_SECRET=local-dev-secret-key-2024
+      - NODE_ENV=production
+      - PORT=5000
+    depends_on:
+      mongo:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  mongo-data:

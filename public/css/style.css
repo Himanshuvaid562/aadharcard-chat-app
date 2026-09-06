@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* LOGIN PAGE */
+
+.login-body {
+    height: 100vh;
+    background: linear-gradient(135deg, #075e54, #128c7e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    text-align: center;
+    color: white;
+}
+
+.login-container h1 {
+    margin-bottom: 10px;
+}
+
+.login-container p {
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #25d366;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    background: #1ebd5a;
+}
+
+/* CHAT PAGE */
+
+.chat-container {
+    display: flex;
+    height: 100vh;
+    background: #ece5dd;
+}
+
+.sidebar {
+    width: 30%;
+    background: #075e54;
+    color: white;
+    padding: 20px;
+}
+
+.chat-box {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+
+.chat-header {
+    padding: 15px;
+    background: #128c7e;
+    color: white;
+    font-weight: bold;
+}
+
+.messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.message {
+    max-width: 60%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.sent {
+    background: #dcf8c6;
+    margin-left: auto;
+}
+
+.received {
+    background: #f1f0f0;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    background: #f0f0f0;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.input-area button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #25d366;
+    color: white;
+    cursor: pointer;
+}

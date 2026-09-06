@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aadhaar Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="sidebar">
+        <h2>Chats</h2>
+    </div>
+
+    <div class="chat-box">
+        <div id="messages"></div>
+
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/chat.js"></script>
+</body>
+</html>
